@@ -73,6 +73,21 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: "/",
+    component: Layout,
+    redirect: "/selector",
+    name: 'Index',
+    meta: { title: "工作台", icon: "index" }, // 图标
+    children: [
+      {
+        path: "/selector",
+        component: () => import("@/views/selector/index"),
+        name: "Index",
+        meta: { title: "选择器练习", icon: "index", }
+      }
+    ]
+  },
   // {
   //   path: '/documentation',
   //   component: Layout,
